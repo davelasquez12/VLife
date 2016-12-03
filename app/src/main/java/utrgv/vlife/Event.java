@@ -4,6 +4,7 @@ package utrgv.vlife;
 public class Event
 {
 	private String mTitle, mHostingOrg, mTime, mLocation, mDescription, mNumLikes, mTags;
+	private boolean mIsLiked;
 
 	public Event(String title, String hostingOrg, String time, String location,
 				 String description, String numLikes, String tags)
@@ -15,6 +16,7 @@ public class Event
 		mDescription = description;
 		mNumLikes = numLikes;
 		mTags = tags;
+		mIsLiked = false;
 	}
 
 	public Event(){}
@@ -84,8 +86,18 @@ public class Event
 		return mTags;
 	}
 
-	private void setTags(String tags)
+	public void setTags(String tags)
 	{
 		mTags = tags;
+	}
+
+	public boolean isLiked()
+	{
+		return mIsLiked;
+	}
+
+	public void setLikeStatus(boolean isLiked)
+	{
+		mIsLiked = isLiked;
 	}
 }

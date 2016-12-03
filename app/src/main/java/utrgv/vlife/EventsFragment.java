@@ -1,8 +1,10 @@
 package utrgv.vlife;
 
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,6 +18,7 @@ public class EventsFragment extends Fragment
 {
 	private List<Event> mEventList = new ArrayList<>();
 	private RecyclerView mEventsRV;
+	private LinearLayoutManager mLayoutManager;
 	private int mVPPage;
 	private EventsAdapter mEventsAdapter;
 
@@ -26,8 +29,12 @@ public class EventsFragment extends Fragment
 		super.onCreate(savedInstanceState);
 		setRetainInstance(true);
 
-		mEventList.add(new Event("$1 Slice Pizza", "Hack and Make", "12:15 - 1:00 PM", "Engineering Bldg, entrance", "", "32", "#pizza, #fundraiser"));
-
+		mEventList.add(new Event("$1 Slice Pizza", "Association of Computer Machinery", "12:15 PM - 1:00 PM", "Engineering Bldg, entrance", "", "32", "#pizza #fundraiser #food"));
+		mEventList.add(new Event("Stargazing Night", "Astronomy Club", "8:00 PM - 11:00 PM", "Track Field", "", "51", "#astronomy #social-event #free-food"));
+		mEventList.add(new Event("Why Software Engineering Is Cool!", "Computer Science Dept.", "3:00 PM- 4:30 PM", "ENGR Bldg, auditorium", "", "112", "#speaker/presentation #free-food"));
+		mEventList.add(new Event("Free Tacos!", "Chess Club", "12:15 PM - 1:00 PM", "Math Bldg, entrance", "", "245", "#free-food #tacos"));
+		mEventList.add(new Event("League Tournament", "LoL Club", "12:00 PM - 2:00 AM", "Location is TBA", "", "47", "#gaming #league-of-legends #food"));
+		mEventList.add(new Event("Movie Night (Star Wars: The Force Awakens)", "Theatre Club", " 7:30 PM - 10:00 PM", "ARHU Bldg, Rm 2.124", "", "25", "#movie #social-event"));
 	}
 
 	@Nullable
@@ -36,7 +43,10 @@ public class EventsFragment extends Fragment
 	{
 		View view = inflater.inflate(R.layout.events_recycler_view, container, false);
 		mEventsRV = (RecyclerView) view.findViewById(R.id.events_recycyler_view);
-		mEventsRV.setLayoutManager(new LinearLayoutManager(getActivity()));
+		mLayoutManager = new LinearLayoutManager(getActivity());
+		mEventsRV.setLayoutManager(mLayoutManager);
+		mEventsRV.addItemDecoration(new DividerItemDecoration(mEventsRV.getContext(),mLayoutManager.getOrientation()));
+
 		mEventsRV.setHasFixedSize(true);
 		setupRVAdapter();
 
@@ -69,7 +79,7 @@ public class EventsFragment extends Fragment
 		public void onBindViewHolder(EventHolder holder, int position)
 		{
 			Event event = mEventList.get(position);
-			holder.bindData(event);
+			holder.bindData(event, getActivity().getApplicationContext());
 		}
 
 		@Override
