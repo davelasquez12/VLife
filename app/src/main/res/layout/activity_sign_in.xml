@@ -29,7 +29,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:src="@drawable/utrgv_logo_full"/>
+            android:src="@drawable/logo_v1_trans"/>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"

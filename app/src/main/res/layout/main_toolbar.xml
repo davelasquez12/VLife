@@ -10,8 +10,8 @@
     app:title="Events"
     app:subtitle="All"
     app:subtitleTextColor="#ffffff"
-    app:titleTextColor="#ffffff">
-
+    app:titleTextColor="#ffffff"
+    app:theme="@style/menuTheme">
 
 
 </android.support.v7.widget.Toolbar>

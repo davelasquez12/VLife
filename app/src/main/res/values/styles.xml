@@ -10,7 +10,7 @@
         <!--<item name="actionBarTheme">@style/menuTheme</item>-->
     </style>
 
-    <style name="menuTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+    <style name="menuTheme" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="colorControlNormal">#ffffff</item>
     </style>
 

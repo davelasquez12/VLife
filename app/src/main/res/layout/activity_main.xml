@@ -41,7 +41,7 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        tools:text="Monday, Dec 2nd, 2016"
+                        android:text="Monday, Dec 2nd, 2016"
                         android:textStyle="bold"
                         android:textColor="#ffffff"/>
 
