@@ -13,4 +13,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <string name="nav_drawer_opened">Nav drawer opened</string>
+    <string name="nav_drawer_closed">Nav drawer closed</string>
 </resources>

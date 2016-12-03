@@ -11,7 +11,8 @@
     app:subtitle="All"
     app:subtitleTextColor="#ffffff"
     app:titleTextColor="#ffffff"
-    app:theme="@style/menuTheme">
+    app:theme="@style/menuTheme"
+    app:contentInsetStartWithNavigation="0dp">
 
 
 </android.support.v7.widget.Toolbar>
