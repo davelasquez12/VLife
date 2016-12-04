@@ -30,10 +30,12 @@
                     android:padding="4dp"/>
 
                 <LinearLayout
+                    android:id="@+id/select_date_from_calendar_button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
                     android:gravity="center">
 
                     <TextView
@@ -83,6 +85,7 @@
             android:id="@+id/main_nav_drawer_list_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:dividerHeight="1dp"
             android:divider="@android:color/darker_gray">
         </ListView>
 

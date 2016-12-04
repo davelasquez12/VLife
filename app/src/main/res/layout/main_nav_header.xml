@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/utrgv_logo_full"
+        android:src="@drawable/logo_v1_trans"
         android:paddingTop="14dp"/>
 
 </LinearLayout>

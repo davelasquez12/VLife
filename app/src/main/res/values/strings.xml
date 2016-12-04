@@ -16,4 +16,11 @@
 
     <string name="nav_drawer_opened">Nav drawer opened</string>
     <string name="nav_drawer_closed">Nav drawer closed</string>
+    <string name="post_visibility_prompt">Set Post Visibility</string>
+    
+    <string-array name="post_visibility">
+        <item>Set Post Visibility</item>
+        <item>Public</item>
+        <item>Private (students/faculty only)</item>
+    </string-array>
 </resources>

@@ -2,18 +2,13 @@
 <android.support.v7.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_toolbar"
+    android:id="@+id/create_post_toolbar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:background="@color/colorPrimary"
-    app:layout_scrollFlags="enterAlways|scroll"
-    app:title="Events"
-    app:subtitle="All"
-    app:subtitleTextColor="#ffffff"
+    app:title="Create Post"
     app:titleTextColor="#ffffff"
     app:theme="@style/menuTheme"
     app:contentInsetStartWithNavigation="0dp">
-
 
 </android.support.v7.widget.Toolbar>
