@@ -10,7 +10,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -64,6 +70,21 @@ public class MainActivity extends AppCompatActivity
 
 		mDrawerLayout.addDrawerListener(mDrawerToggle);
 		mDrawerToggle.syncState();
+
+		//ArrayList<String> navOptions = new ArrayList<>();
+		String[] navoptions = {"My Organizations", "Favorites", "Top Posts", "#free-food", "#food", "#speaker-presentation",
+				"#social-event", "#fundraiser", "Settings"};
+		ArrayList<String> list = new ArrayList<>();
+		list.addAll(Arrays.asList(navoptions));
+		ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
+		mNavDrawerLV.setAdapter(adapter);
+		mNavDrawerLV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
+			{
+
+			}
+		});
 	}
 
 	private void setupViewPager()

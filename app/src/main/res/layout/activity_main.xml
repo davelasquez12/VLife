@@ -71,17 +71,19 @@
     <!--This is is the nav drawer in MainActivity-->
     <LinearLayout
         android:id="@+id/main_nav_drawer_layout"
-        android:layout_width="220dp"
+        android:layout_width="280dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#ffffff">
 
         <include layout="@layout/main_nav_header"/>
 
         <ListView
             android:id="@+id/main_nav_drawer_list_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:divider="@android:color/darker_gray">
         </ListView>
 
     </LinearLayout>

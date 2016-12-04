@@ -10,8 +10,15 @@
         <!--<item name="actionBarTheme">@style/menuTheme</item>-->
     </style>
 
+    <!--Makes the overflow menu icon (three vertical dots) colored white-->
     <style name="menuTheme" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="colorControlNormal">#ffffff</item>
+    </style>
+
+    <style name="gray_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:height">1dp</item>
+        <item name="android:background">@color/gray</item>
     </style>
 
 </resources>
