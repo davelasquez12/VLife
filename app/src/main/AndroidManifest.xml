@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".CreatePostActivity">
         </activity>
+        <activity android:name=".CreatePostPreviewActivity">
+        </activity>
     </application>
 
 </manifest>

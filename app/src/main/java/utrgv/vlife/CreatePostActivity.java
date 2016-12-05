@@ -1,17 +1,21 @@
 package utrgv.vlife;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 public class CreatePostActivity extends AppCompatActivity
 {
 	private Toolbar mToolbar;
 	private Spinner mPostVisSpinner;
+	private Button mContinueButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -21,6 +25,7 @@ public class CreatePostActivity extends AppCompatActivity
 
 		mToolbar = (Toolbar) findViewById(R.id.create_post_toolbar);
 		mPostVisSpinner =(Spinner) findViewById(R.id.spinner_post_visibility);
+		mContinueButton = (Button) findViewById(R.id.create_post_continue_button);
 		setSupportActionBar(mToolbar);
 
 		assert getSupportActionBar() != null;
@@ -32,6 +37,14 @@ public class CreatePostActivity extends AppCompatActivity
 		mPostVisSpinner.setAdapter(adapter);
 
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+		mContinueButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view)
+			{
+				Intent i = new Intent(CreatePostActivity.this, CreatePostPreviewActivity.class);
+				startActivity(i);
+			}
+		});
 	}
 
 	@Override
