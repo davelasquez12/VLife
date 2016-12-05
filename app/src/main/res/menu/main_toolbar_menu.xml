@@ -14,6 +14,12 @@
         app:showAsAction="never"/>-->
 
     <item
+        android:id="@+id/menu_item_sort_events"
+        android:title="Sort Events"
+        android:icon="@drawable/ic_sort_white_24dp"
+        app:showAsAction="always"/>
+
+    <item
         android:id="@+id/menu_item_create_post"
         android:title="Create Post"
         android:icon="@drawable/ic_plus_white_36dp"

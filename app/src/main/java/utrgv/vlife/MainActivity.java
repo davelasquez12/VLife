@@ -1,9 +1,11 @@
 package utrgv.vlife;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity
 	private ListView mNavDrawerLV;
 	private LinearLayout mDateSelectButton;
 	private int mCurrentVPPos = MainVPAdapter.NUM_EVENT_FRAGS/2;
+	private String[] mSortCategories = {"Real Time", "Chronological", "Most Liked", "Least Liked"};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -76,6 +79,10 @@ public class MainActivity extends AppCompatActivity
 				Intent i = new Intent(this, CreatePostActivity.class);
 				startActivity(i);
 				return  true;
+
+			case R.id.menu_item_sort_events:
+				showSortDialog();
+				return true;
 
 			case android.R.id.home:
 				onBackPressed();
@@ -142,5 +149,21 @@ public class MainActivity extends AppCompatActivity
 
 			}
 		});
+	}
+
+	private void showSortDialog()
+	{
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Sort Events By:");
+		builder.setSingleChoiceItems(mSortCategories, 0, new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialogInterface, int i)
+			{
+				dialogInterface.dismiss();
+			}
+		});
+
+		AlertDialog dialog = builder.create();
+		dialog.show();
 	}
 }
