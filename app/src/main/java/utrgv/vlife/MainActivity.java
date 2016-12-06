@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity
 		mDrawerLayout.addDrawerListener(mDrawerToggle);
 		mDrawerToggle.syncState();
 
-		String[] navOptions = {"My Profile", "My Organizations", "Favorites", "#free-food", "#food", "#speaker-presentation",
+		String[] navOptions = {"My Profile", "My Organizations", "All Organizations", "Favorites", "#free-food", "#food", "#speaker-presentation",
 				"#social-event", "#fundraiser", "Settings"};
 		ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, navOptions);
 		mNavDrawerLV.setAdapter(adapter);

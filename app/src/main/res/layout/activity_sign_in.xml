@@ -66,6 +66,11 @@
             style="@style/Widget.AppCompat.Button.Colored"
             android:text="Sign In"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In As Guest"/>
+
     </LinearLayout>
 
 </ScrollView>
